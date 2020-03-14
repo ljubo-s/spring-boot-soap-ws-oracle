@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="0c4fc2a7-bf04-4b0b-8695-7dca8954b832" name="soapPortSoap TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="3a92e2e6-641f-479e-9afd-a82d3e5e1694" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="first TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="60151d71-5f47-40fe-a032-2a1a3e951137" name="first"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>soapPortSoap</con:interface><con:operation>first</con:operation><con:request name="first" id="f360768b-1fea-4d81-8c98-fa9086200064"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soapws/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.soapws.com/test/ws/soapws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:firstRequest>\r
+         <soap:name>Marko</soap:name>\r
+         <soap:lastname>Marković</soap:lastname>\r
+         <soap:email>marko@gmail.com</soap:email>\r
+         <!--Optional:-->\r
+         <soap:status>1</soap:status>\r
+         <!--Zero or more repetitions:-->\r
+         <soap:paramFields>\r
+            <!--Optional:-->\r
+            <soap:key></soap:key>\r
+            <!--Optional:-->\r
+            <soap:code></soap:code>\r
+         </soap:paramFields>\r
+      </soap:firstRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://schemas.soapws.com/test/ws/soapws/definitions/soapPort/firstRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="07bfa0b2-9b28-4cc5-940c-159807574e08" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>10</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>30</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Thread</con:type><con:config><startThreadCount>1</startThreadCount><endThreadCount>10</endThreadCount></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:testCase id="b50880a3-5747-4f95-9935-b00f179cd9e4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="second TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="88964201-4ec3-4ae6-8ff0-fda5f0f47c67" name="second"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>soapPortSoap</con:interface><con:operation>second</con:operation><con:request name="second" id="5f895e43-29dd-47f2-9847-d59a41553f36"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soapws/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.soapws.com/test/ws/soapws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:secondRequest>\r
+         <soap:id></soap:id>\r
+         <!--Zero or more repetitions:-->\r
+         <soap:paramFields>\r
+            <!--Optional:-->\r
+            <soap:key>?</soap:key>\r
+            <!--Optional:-->\r
+            <soap:code>?</soap:code>\r
+         </soap:paramFields>\r
+      </soap:secondRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://schemas.soapws.com/test/ws/soapws/definitions/soapPort/secondRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="4f11dcd9-7450-42c6-8126-86cf110cf5b9" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>9</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>20</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Thread</con:type><con:config><startThreadCount>1</startThreadCount><endThreadCount>10</endThreadCount></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:testCase id="cefd3392-4576-418e-8d2d-c5bb7a7595b2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="third TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="be1ff410-74ce-4422-85c7-2cfdefdaa498" name="third"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>soapPortSoap</con:interface><con:operation>third</con:operation><con:request name="third" id="be73b8c6-f20e-4dee-b08d-4a0d87e1aaa1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/soapws/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://schemas.soapws.com/test/ws/soapws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:thirdRequest>\r
+         <soap:email></soap:email>\r
+         <!--Zero or more repetitions:-->\r
+         <soap:paramFields>\r
+            <!--Optional:-->\r
+            <soap:key>?</soap:key>\r
+            <!--Optional:-->\r
+            <soap:code>?</soap:code>\r
+         </soap:paramFields>\r
+      </soap:thirdRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://schemas.soapws.com/test/ws/soapws/definitions/soapPort/thirdRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="d18ace71-7fd4-4d57-baa3-5db2a2371f36" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>20</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Thread</con:type><con:config><startThreadCount>1</startThreadCount><endThreadCount>10</endThreadCount></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite>
